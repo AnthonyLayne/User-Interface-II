@@ -1,8 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  /*border: 0;*/
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  /* border: 1px solid grey;*/
+}
+
 header {
-  width: 100%;
   background-color: rgb(67, 95, 117);
   padding: 2%;
   margin-bottom: 1%;
+}
+h1 {
+  padding: 2%;
+  font-size: 2.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 footer {
@@ -18,9 +160,20 @@ footer {
   background-color: lightsteelblue;
 }
 
+.box1,
 .mydescription {
-  padding: 5%;
+  padding: 2%;
 }
+.mydescription,
+h2 {
+  padding: 2%;
+}
+.box1,
+.mydescription,
+p {
+  padding: 2%;
+}
+
 .row1 {
   display: flex;
   justify-content: space-evenly;
@@ -35,4 +188,64 @@ footer {
 }
 .myportfolio {
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .row1 div {
+    width: 20%;
+  }
+  .row2 div {
+    width: 20%;
+  }
+
+  .box1 img {
+    width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  button {
+    width: 40%;
+    margin: 1% 0;
+  }
+  .box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mydescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .row1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .row1 div {
+    width: 40%;
+    margin: 2% 0;
+  }
+  .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .row2 div {
+    width: 40%;
+    margin: 2% 0;
+  }
 }
